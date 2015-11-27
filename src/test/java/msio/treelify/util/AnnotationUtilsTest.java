@@ -14,25 +14,20 @@ public class AnnotationUtilsTest {
 
 	@Test
 	public void testValidTestEntity() throws Exception {
-		Field field = AnnotationUtils.getAnnotatedField(ValidTestEntity.class,
-				TreelifyId.class);
+		Field field = AnnotationUtils.getAnnotatedField(ValidTestEntity.class, TreelifyId.class);
 		assertThat(field.getName(), is("id"));
 	}
 
 	@Test(expected=AnnotatedFieldNotUniqueException.class)
 	public void testInvalidTestEntityWithFieldNotUnique() throws Exception {
-		AnnotationUtils.getAnnotatedField(
-				InvalidTestEntityWithFieldNotUnique.class, TreelifyId.class);
+		AnnotationUtils.getAnnotatedField(InvalidTestEntityWithFieldNotUnique.class, TreelifyId.class);
 	}
 
 	@Test(expected=AnnotatedFieldNotFoundException.class)
 	public void testInvalidTestEntityWithFieldNotFound() throws Exception {
-		AnnotationUtils.getAnnotatedField(
-				InvalidTestEntityWithFieldNotFound.class, TreelifyId.class);
+		AnnotationUtils.getAnnotatedField(InvalidTestEntityWithFieldNotFound.class, TreelifyId.class);
 	}
 
-	
-	
 	private static class ValidTestEntity {
 
 		@TreelifyId
