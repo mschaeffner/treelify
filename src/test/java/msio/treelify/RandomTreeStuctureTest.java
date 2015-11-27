@@ -1,6 +1,5 @@
 package msio.treelify;
 
-import static org.hamcrest.Matchers.hasItem;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 
@@ -8,18 +7,15 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Random;
+import java.util.Set;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
-
-import msio.treelify.TreeNode;
-import msio.treelify.Treelify;
-import msio.treelify.TreelifyId;
-import msio.treelify.TreelifyParentId;
 
 import org.junit.Test;
 
 public class RandomTreeStuctureTest {
 
-	static class Project {
+	static class Project implements Comparable<Project> {
 
 		@TreelifyId
 		private final int id;
@@ -40,32 +36,41 @@ public class RandomTreeStuctureTest {
 			return parentId;
 		}
 
+		@Override
+		public int compareTo(Project o) {
+			return Integer.compare(id, o.id);
+		}
+
 	}
 	
 	@Test
 	public void test() throws Exception {
 
-		final int numberOfProjects = 10000;
+		Treelify treelify = new Treelify();
 
-		Collection<Project> projectList = new ArrayList<Project>();
+		final int numberOfProjects = 100000;
 
+		List<Project> projectList = new ArrayList<Project>();
+		Random random = new Random();
 		
 		IntStream.rangeClosed(1, numberOfProjects).forEach(i -> {
 			
-			int parentId = new Random().nextInt(i);
+			int parentId = random.nextInt(i);
 			projectList.add(new Project(i, parentId));
 			
 		});
 		
 
-		Treelify treelify = new Treelify();
 		List<TreeNode<Project>> nodes = treelify.toTree(projectList);
 		Collection<Project> result = treelify.fromTree(nodes);
 
-		
-		assertThat(result.size(), is(numberOfProjects));
-		projectList.forEach(p -> assertThat(result, hasItem(p)));
 
+		assertThat(result.size(), is(numberOfProjects));
+		
+		Set<Project> inputSet = projectList.stream().collect(Collectors.toSet());
+		Set<Project> outputSet = result.stream().collect(Collectors.toSet());
+		assertThat(outputSet, is(inputSet));
+		
 	}
 
 }
