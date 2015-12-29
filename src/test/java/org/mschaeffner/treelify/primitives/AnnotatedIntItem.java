@@ -1,7 +1,7 @@
-package msio.treelify.primitives;
+package org.mschaeffner.treelify.primitives;
 
-import msio.treelify.TreelifyId;
-import msio.treelify.TreelifyParentId;
+import org.mschaeffner.treelify.TreelifyId;
+import org.mschaeffner.treelify.TreelifyParentId;
 
 public class AnnotatedIntItem {
 

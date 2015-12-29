@@ -1,4 +1,4 @@
-package msio.treelify;
+package org.mschaeffner.treelify;
 
 import java.util.ArrayList;
 import java.util.List;

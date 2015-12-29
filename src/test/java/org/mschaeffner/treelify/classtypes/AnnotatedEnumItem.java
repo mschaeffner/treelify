@@ -1,7 +1,7 @@
-package msio.treelify.classtypes;
+package org.mschaeffner.treelify.classtypes;
 
-import msio.treelify.TreelifyId;
-import msio.treelify.TreelifyParentId;
+import org.mschaeffner.treelify.TreelifyId;
+import org.mschaeffner.treelify.TreelifyParentId;
 
 public class AnnotatedEnumItem implements IAnnotatedItem<AnnotatedEnumItem.KEY> {
 

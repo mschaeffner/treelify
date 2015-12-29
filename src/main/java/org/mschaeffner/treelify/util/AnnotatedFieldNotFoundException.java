@@ -1,4 +1,4 @@
-package msio.treelify.util;
+package org.mschaeffner.treelify.util;
 
 import java.lang.annotation.Annotation;
 

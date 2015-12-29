@@ -1,9 +1,9 @@
-package msio.treelify.classtypes;
+package org.mschaeffner.treelify.classtypes;
 
 import java.util.Date;
 
-import msio.treelify.TreelifyId;
-import msio.treelify.TreelifyParentId;
+import org.mschaeffner.treelify.TreelifyId;
+import org.mschaeffner.treelify.TreelifyParentId;
 
 public class AnnotatedDateItem implements IAnnotatedItem<Date> {
 

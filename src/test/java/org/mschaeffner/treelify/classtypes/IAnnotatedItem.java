@@ -1,4 +1,4 @@
-package msio.treelify.classtypes;
+package org.mschaeffner.treelify.classtypes;
 
 public interface IAnnotatedItem<T> {
 

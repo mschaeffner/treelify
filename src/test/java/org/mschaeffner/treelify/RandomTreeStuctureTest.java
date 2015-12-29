@@ -1,4 +1,4 @@
-package msio.treelify;
+package org.mschaeffner.treelify;
 
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
@@ -12,6 +12,10 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 import org.junit.Test;
+import org.mschaeffner.treelify.TreeNode;
+import org.mschaeffner.treelify.Treelify;
+import org.mschaeffner.treelify.TreelifyId;
+import org.mschaeffner.treelify.TreelifyParentId;
 
 public class RandomTreeStuctureTest {
 

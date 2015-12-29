@@ -1,4 +1,4 @@
-package msio.treelify.classtypes;
+package org.mschaeffner.treelify.classtypes;
 
 import static org.hamcrest.Matchers.hasSize;
 import static org.junit.Assert.assertThat;
@@ -8,10 +8,9 @@ import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 
-import msio.treelify.TreeNode;
-import msio.treelify.Treelify;
-
 import org.junit.Test;
+import org.mschaeffner.treelify.TreeNode;
+import org.mschaeffner.treelify.Treelify;
 
 public class TreelifyTest {
 

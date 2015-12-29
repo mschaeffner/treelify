@@ -1,4 +1,4 @@
-package msio.treelify.util;
+package org.mschaeffner.treelify.util;
 
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
@@ -6,9 +6,11 @@ import static org.junit.Assert.assertThat;
 import java.lang.reflect.Field;
 
 import org.junit.Test;
-
-import msio.treelify.TreelifyId;
-import msio.treelify.TreelifyParentId;
+import org.mschaeffner.treelify.TreelifyId;
+import org.mschaeffner.treelify.TreelifyParentId;
+import org.mschaeffner.treelify.util.AnnotatedFieldNotFoundException;
+import org.mschaeffner.treelify.util.AnnotatedFieldNotUniqueException;
+import org.mschaeffner.treelify.util.AnnotationUtils;
 
 public class AnnotationUtilsTest {
 

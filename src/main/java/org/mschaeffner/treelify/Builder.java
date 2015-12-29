@@ -1,4 +1,4 @@
-package msio.treelify;
+package org.mschaeffner.treelify;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
@@ -8,7 +8,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-import msio.treelify.util.AnnotationUtils;
+import org.mschaeffner.treelify.util.AnnotationUtils;
 
 public class Builder<T> {
 
